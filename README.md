@@ -1,6 +1,6 @@
 # Task Management Application
 
-This is a simple Task Management Application built with Node.js and Express.
+This is a simple In-Memory Task Management Application built with Node.js and Express.
 
 ## Table of Contents
 - [Overview](#overview)
