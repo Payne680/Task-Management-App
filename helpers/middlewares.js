@@ -1,20 +1,24 @@
-function mustBeInteger(req, res, next) {
-    const id = req.params.id
-    if (!Number.isInteger(parseInt(id))) {
-        res.status(400).json({ message: 'ID must be an integer' })
-    } else {
-        next()
+let loggedInUser = null;
+
+function authenticate(username, password) {
+    // Simulating basic authentication
+    const user = usersData.find(user => user.username === username && user.password === password);
+    if (user) {
+        loggedInUser = user;
+        return true;
     }
+    return false;
 }
-function checkFieldsPost(req, res, next) {
-    const { title, content, tags } = req.body
-    if (title && content && tags) {
-        next()
-    } else {
-        res.status(400).json({ message: 'fields are not good' })
+
+function requireAuth(req, res, next) {
+    if (!loggedInUser) {
+        return res.status(401).send('Unauthorized');
     }
+    req.user = loggedInUser;
+    next();
 }
+
 module.exports = {
-    mustBeInteger,
-    checkFieldsPost
-}
+    authenticate,
+    requireAuth,
+};
