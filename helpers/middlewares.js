@@ -1,8 +1,11 @@
+const usersData = require('../data/users.json');
 let loggedInUser = null;
 
 function authenticate(username, password) {
     // Simulating basic authentication
-    const user = usersData.find(user => user.username === username && user.password === password);
+    const user = usersData.find(
+        user => user.username === username && user.password === password
+    );
     if (user) {
         loggedInUser = user;
         return true;
