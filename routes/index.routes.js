@@ -22,7 +22,7 @@ router.post('/signup', (req, res) => {
     }
     const newUser = User.createUser(username, password, usersData);
 
-    // Save usersData back to users.json
+    // Save your usersData back to users.json
     User.saveUsersToFile(usersData);
 
     res.send('User registered successfully');
