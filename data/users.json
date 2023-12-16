@@ -1,1 +1,29 @@
-[{"id":"1","username":"user1","password":"password1"},{"id":"2","username":"user2","password":"password2"},{"id":"_zwsde6n","username":"james","password":"pass"},{"id":"_xjslaun","username":"bobby","password":"pass"}]
+
+[
+  {
+    "id": "1",
+    "username": "user1",
+    "password": "password1"
+  },
+  {
+    "id": "2",
+    "username": "user2",
+    "password": "password2"
+  },
+  {
+    "id": "_zwsde6n",
+    "username": "james",
+    "password": "pass"
+  },
+  {
+    "id": "_xjslaun",
+    "username": "bobby",
+    "password": "pass"
+  },
+  {
+    "id": "_islqrzy",
+    "username": "macbook",
+    "password": "oneday"
+  }
+]
+
